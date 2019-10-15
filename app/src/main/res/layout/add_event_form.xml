@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/event_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/event_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/event_name_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Event Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/event_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/event_name_label" />
+
+    <DatePicker
+        android:id="@+id/date_selector"
+        android:layout_width="333dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="16dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintStart_toStartOf="@+id/event_date_label"
+        app:layout_constraintTop_toBottomOf="@+id/event_date_label" />
+
+    <TextView
+        android:id="@+id/event_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Select Date:"
+        app:layout_constraintStart_toStartOf="@+id/event_name_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/event_name_edit_text" />
+
+    <TextView
+        android:id="@+id/time_select_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Select Time:"
+        app:layout_constraintStart_toStartOf="@+id/date_selector"
+        app:layout_constraintTop_toBottomOf="@+id/date_selector" />
+
+    <TimePicker
+        android:id="@+id/event_time_picker"
+        android:layout_width="291dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="16dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintStart_toStartOf="@+id/time_select_label"
+        app:layout_constraintTop_toBottomOf="@+id/time_select_label" />
+
+    <TextView
+        android:id="@+id/extra_detail_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Other Details:"
+        app:layout_constraintStart_toStartOf="@+id/event_time_picker"
+        app:layout_constraintTop_toBottomOf="@+id/event_time_picker" />
+
+    <EditText
+        android:id="@+id/detail_text_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/extra_detail_label"
+        app:layout_constraintTop_toBottomOf="@+id/extra_detail_label" />
+
+    <Button
+        android:id="@+id/submit_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        app:layout_constraintStart_toStartOf="@+id/detail_text_box"
+        app:layout_constraintTop_toBottomOf="@+id/detail_text_box" />
+</androidx.constraintlayout.widget.ConstraintLayout>
